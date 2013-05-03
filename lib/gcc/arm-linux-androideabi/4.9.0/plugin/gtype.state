@@ -17644,32 +17644,32 @@ nil ))
 (!type already_seen 688)
 )
  gc_pointed_to "vec<tree_int,va_gc>"
-(!srcfileloc  "cp/parser.c" 8323)
+(!srcfileloc  "cp/parser.c" 8339)
 
 (!fields 2 
 (!pair  "va_gc"
 (!type already_seen 3)
 
-(!srcfileloc  "cp/parser.c" 8323)
+(!srcfileloc  "cp/parser.c" 8339)
 nil )
 (!pair  "tree_int"
 (!type struct 690 nil  gc_used "tree_int"
-(!srcfileloc  "cp/parser.c" 8322)
+(!srcfileloc  "cp/parser.c" 8338)
 
 (!fields 2 
 (!pair  "t"
 (!type already_seen 5)
 
-(!srcfileloc  "cp/parser.c" 8320)
+(!srcfileloc  "cp/parser.c" 8336)
 nil )
 (!pair  "i"
 (!type already_seen 9)
 
-(!srcfileloc  "cp/parser.c" 8321)
+(!srcfileloc  "cp/parser.c" 8337)
 nil ))
 nil 260 nil )
 
-(!srcfileloc  "cp/parser.c" 8323)
+(!srcfileloc  "cp/parser.c" 8339)
 nil ))
 )
 
@@ -25936,12 +25936,12 @@ nil )
 (!pair  "vec<tree_int,va_gc>"
 (!type already_seen 688)
 
-(!srcfileloc  "cp/parser.c" 8323)
+(!srcfileloc  "cp/parser.c" 8339)
 nil )
 (!pair  "tree_int"
 (!type already_seen 690)
 
-(!srcfileloc  "cp/parser.c" 8322)
+(!srcfileloc  "cp/parser.c" 8338)
 nil )
 (!pair  "cp_parser_expression_stack"
 (!type array 1388 nil  gc_unused "NUM_PREC_VALUES" 
@@ -30119,22 +30119,22 @@ nil )
 (!pair  "the_parser"
 (!type already_seen 694)
 
-(!srcfileloc  "cp/parser.c" 28352)
+(!srcfileloc  "cp/parser.c" 28368)
 nil )
 (!pair  "lambda_scope_stack"
 (!type already_seen 689)
 
-(!srcfileloc  "cp/parser.c" 8323)
+(!srcfileloc  "cp/parser.c" 8339)
 nil )
 (!pair  "lambda_count"
 (!type already_seen 9)
 
-(!srcfileloc  "cp/parser.c" 8317)
+(!srcfileloc  "cp/parser.c" 8333)
 nil )
 (!pair  "lambda_scope"
 (!type already_seen 5)
 
-(!srcfileloc  "cp/parser.c" 8316)
+(!srcfileloc  "cp/parser.c" 8332)
 nil )
 (!pair  "cp_parser_context_free_list"
 (!type already_seen 700)
