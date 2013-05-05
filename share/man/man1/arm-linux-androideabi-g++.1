@@ -124,7 +124,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2013-05-04" "gcc-4.9.0" "GNU"
+.TH GCC 1 "2013-05-06" "gcc-4.9.0" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -630,11 +630,11 @@ in the following sections.
 .Sp
 \&\fI\s-1HPPA\s0 Options\fR
 \&\fB\-march=\fR\fIarchitecture-type\fR 
-\&\fB\-mbig\-switch  \-mdisable\-fpregs  \-mdisable\-indexing 
+\&\fB\-mdisable\-fpregs  \-mdisable\-indexing 
 \&\-mfast\-indirect\-calls  \-mgas  \-mgnu\-ld   \-mhp\-ld 
 \&\-mfixed\-range=\fR\fIregister-range\fR 
 \&\fB\-mjump\-in\-delay \-mlinker\-opt \-mlong\-calls 
-\&\-mlong\-load\-store  \-mno\-big\-switch  \-mno\-disable\-fpregs 
+\&\-mlong\-load\-store  \-mno\-disable\-fpregs 
 \&\-mno\-disable\-indexing  \-mno\-fast\-indirect\-calls  \-mno\-gas 
 \&\-mno\-jump\-in\-delay  \-mno\-long\-load\-store 
 \&\-mno\-portable\-runtime  \-mno\-soft\-float 
@@ -12674,11 +12674,6 @@ other way around.
 .IX Item "-mpa-risc-2-0"
 .PD
 Synonyms for \fB\-march=1.0\fR, \fB\-march=1.1\fR, and \fB\-march=2.0\fR respectively.
-.IP "\fB\-mbig\-switch\fR" 4
-.IX Item "-mbig-switch"
-Generate code suitable for big switch tables.  Use this option only if
-the assembler/linker complain about out-of-range branches within a switch
-table.
 .IP "\fB\-mjump\-in\-delay\fR" 4
 .IX Item "-mjump-in-delay"
 Fill delay slots of function calls with unconditional jump instructions
