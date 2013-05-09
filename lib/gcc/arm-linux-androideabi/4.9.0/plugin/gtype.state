@@ -4,7 +4,7 @@
 ;;; Don't parse this file wihout knowing GCC gengtype internals.
 ;;; This file should be parsed by the same gengtype which wrote it.
 
-(!version  "4.9.0 20130506 (experimental)")
+(!version  "4.9.0 20130509 (experimental)")
 
 (!srcdir  "../.././../gcc/gcc-SaberMod/gcc")
 
@@ -18940,33 +18940,33 @@ nil 0 nil )
 nil 0 nil )
 
 (!type struct 777 nil  gc_used "lazy_hex_fp_value_struct"
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1030)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1032)
 
 (!fields 5 
 (!pair  "hex_str"
 (!type already_seen 36)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1025)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1027)
 nil )
 (!pair  "macro"
 (!type already_seen 574)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1026)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1028)
 nil )
 (!pair  "mode"
 (!type already_seen 9)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1027)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1029)
 nil )
 (!pair  "digits"
 (!type already_seen 9)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1028)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1030)
 nil )
 (!pair  "fp_suffix"
 (!type already_seen 36)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1029)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1031)
 nil ))
 nil 386 nil )
 
@@ -19692,7 +19692,7 @@ nil 0 nil )
 (!type struct 853 
 (!type already_seen 852)
  gc_used "target_rtl"
-(!srcfileloc  "rtl.h" 2304)
+(!srcfileloc  "rtl.h" 2303)
 
 (!fields 7 
 (!pair  "x_global_rtl"
@@ -19700,45 +19700,45 @@ nil 0 nil )
 (!type already_seen 136)
 )
 
-(!srcfileloc  "rtl.h" 2279)
+(!srcfileloc  "rtl.h" 2278)
 nil )
 (!pair  "x_pic_offset_table_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2282)
+(!srcfileloc  "rtl.h" 2281)
 nil )
 (!pair  "x_return_address_pointer_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2287)
+(!srcfileloc  "rtl.h" 2286)
 nil )
 (!pair  "x_initial_regno_reg_rtx"
 (!type array 855 nil  gc_used "FIRST_PSEUDO_REGISTER" 
 (!type already_seen 136)
 )
 
-(!srcfileloc  "rtl.h" 2293)
+(!srcfileloc  "rtl.h" 2292)
 nil )
 (!pair  "x_top_of_stack"
 (!type array 856 nil  gc_used "MAX_MACHINE_MODE" 
 (!type already_seen 136)
 )
 
-(!srcfileloc  "rtl.h" 2296)
+(!srcfileloc  "rtl.h" 2295)
 nil )
 (!pair  "x_static_reg_base_value"
 (!type array 857 nil  gc_used "FIRST_PSEUDO_REGISTER" 
 (!type already_seen 136)
 )
 
-(!srcfileloc  "rtl.h" 2300)
+(!srcfileloc  "rtl.h" 2299)
 nil )
 (!pair  "x_mode_mem_attrs"
 (!type array 858 nil  gc_used "(int) MAX_MACHINE_MODE" 
 (!type already_seen 258)
 )
 
-(!srcfileloc  "rtl.h" 2303)
+(!srcfileloc  "rtl.h" 2302)
 nil ))
 nil 511 nil )
 )
@@ -20158,14 +20158,14 @@ nil 0 nil )
 (!type struct 917 
 (!type already_seen 915)
  gc_pointed_to "cgraph_node"
-(!srcfileloc  "cgraph.h" 282)
+(!srcfileloc  "cgraph.h" 284)
 
 (!fields 33 
 (!pair  "symbol"
 (!type struct 918 nil  gc_used "symtab_node_base"
-(!srcfileloc  "cgraph.h" 91)
+(!srcfileloc  "cgraph.h" 93)
 
-(!fields 17 
+(!fields 18 
 (!pair  "type"
 (!type already_seen 9)
 
@@ -20201,15 +20201,20 @@ nil )
 
 (!srcfileloc  "cgraph.h" 64)
 nil )
+(!pair  "unique_name"
+(!type already_seen 9)
+
+(!srcfileloc  "cgraph.h" 66)
+nil )
 (!pair  "order"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 67)
+(!srcfileloc  "cgraph.h" 69)
 nil )
 (!pair  "decl"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 69)
+(!srcfileloc  "cgraph.h" 71)
 nil )
 (!pair  "ref_list"
 (!type struct 919 nil  gc_used "ipa_ref_list"
@@ -20243,13 +20248,13 @@ nil )
 (!type union 925 
 (!type already_seen 924)
  gc_pointed_to "symtab_node_def"
-(!srcfileloc  "cgraph.h" 488)
+(!srcfileloc  "cgraph.h" 490)
 
 (!fields 3 
 (!pair  "symbol"
 (!type already_seen 918)
 
-(!srcfileloc  "cgraph.h" 483)
+(!srcfileloc  "cgraph.h" 485)
 
 (!options 
 (!option tag string  "SYMTAB_SYMBOL")
@@ -20258,7 +20263,7 @@ nil )
 (!pair  "x_function"
 (!type already_seen 917)
 
-(!srcfileloc  "cgraph.h" 486)
+(!srcfileloc  "cgraph.h" 488)
 
 (!options 
 (!option tag string  "SYMTAB_FUNCTION")
@@ -20270,47 +20275,47 @@ nil )
 (!type already_seen 926)
 )
  gc_used "varpool_node"
-(!srcfileloc  "cgraph.h" 467)
+(!srcfileloc  "cgraph.h" 469)
 
 (!fields 7 
 (!pair  "symbol"
 (!type already_seen 918)
 
-(!srcfileloc  "cgraph.h" 452)
+(!srcfileloc  "cgraph.h" 454)
 nil )
 (!pair  "alias_of"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 454)
+(!srcfileloc  "cgraph.h" 456)
 nil )
 (!pair  "analyzed"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 458)
+(!srcfileloc  "cgraph.h" 460)
 nil )
 (!pair  "finalized"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 460)
+(!srcfileloc  "cgraph.h" 462)
 nil )
 (!pair  "output"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 462)
+(!srcfileloc  "cgraph.h" 464)
 nil )
 (!pair  "alias"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 465)
+(!srcfileloc  "cgraph.h" 467)
 nil )
 (!pair  "extra_name_alias"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 466)
+(!srcfileloc  "cgraph.h" 468)
 nil ))
 nil 511 nil )
 
-(!srcfileloc  "cgraph.h" 487)
+(!srcfileloc  "cgraph.h" 489)
 
 (!options 
 (!option tag string  "SYMTAB_VARIABLE")
@@ -20378,12 +20383,12 @@ nil ))
 ))
 nil 511 nil )
 
-(!srcfileloc  "cgraph.h" 72)
+(!srcfileloc  "cgraph.h" 74)
 nil )
 (!pair  "same_comdat_group"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 75)
+(!srcfileloc  "cgraph.h" 77)
 nil )
 (!pair  "lto_file_data"
 (!type pointer 929 
@@ -20498,32 +20503,32 @@ nil )
 nil 511 nil )
 )
 
-(!srcfileloc  "cgraph.h" 78)
+(!srcfileloc  "cgraph.h" 80)
 nil )
 (!pair  "next"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 81)
+(!srcfileloc  "cgraph.h" 83)
 nil )
 (!pair  "previous"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 82)
+(!srcfileloc  "cgraph.h" 84)
 nil )
 (!pair  "next_sharing_asm_name"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 87)
+(!srcfileloc  "cgraph.h" 89)
 nil )
 (!pair  "previous_sharing_asm_name"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 88)
+(!srcfileloc  "cgraph.h" 90)
 nil )
 (!pair  "aux"
 (!type already_seen 10)
 
-(!srcfileloc  "cgraph.h" 90)
+(!srcfileloc  "cgraph.h" 92)
 
 (!options 
 (!option skip string  "")
@@ -20531,113 +20536,113 @@ nil )
 ))
 nil 511 nil )
 
-(!srcfileloc  "cgraph.h" 206)
+(!srcfileloc  "cgraph.h" 208)
 nil )
 (!pair  "callees"
 (!type pointer 934 nil  gc_used
 (!type struct 935 
 (!type already_seen 934)
  gc_pointed_to "cgraph_edge"
-(!srcfileloc  "cgraph.h" 440)
+(!srcfileloc  "cgraph.h" 442)
 
 (!fields 18 
 (!pair  "count"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 406)
+(!srcfileloc  "cgraph.h" 408)
 nil )
 (!pair  "caller"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 407)
+(!srcfileloc  "cgraph.h" 409)
 nil )
 (!pair  "callee"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 408)
+(!srcfileloc  "cgraph.h" 410)
 nil )
 (!pair  "prev_caller"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 409)
+(!srcfileloc  "cgraph.h" 411)
 nil )
 (!pair  "next_caller"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 410)
+(!srcfileloc  "cgraph.h" 412)
 nil )
 (!pair  "prev_callee"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 411)
+(!srcfileloc  "cgraph.h" 413)
 nil )
 (!pair  "next_callee"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 412)
+(!srcfileloc  "cgraph.h" 414)
 nil )
 (!pair  "call_stmt"
 (!type already_seen 310)
 
-(!srcfileloc  "cgraph.h" 413)
+(!srcfileloc  "cgraph.h" 415)
 nil )
 (!pair  "indirect_info"
 (!type pointer 936 nil  gc_used
 (!type struct 937 
 (!type already_seen 936)
  gc_pointed_to "cgraph_indirect_call_info"
-(!srcfileloc  "cgraph.h" 402)
+(!srcfileloc  "cgraph.h" 404)
 
 (!fields 8 
 (!pair  "offset"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 383)
+(!srcfileloc  "cgraph.h" 385)
 nil )
 (!pair  "otr_token"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 385)
+(!srcfileloc  "cgraph.h" 387)
 nil )
 (!pair  "otr_type"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 387)
+(!srcfileloc  "cgraph.h" 389)
 nil )
 (!pair  "param_index"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 389)
+(!srcfileloc  "cgraph.h" 391)
 nil )
 (!pair  "ecf_flags"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 391)
+(!srcfileloc  "cgraph.h" 393)
 nil )
 (!pair  "polymorphic"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 395)
+(!srcfileloc  "cgraph.h" 397)
 nil )
 (!pair  "agg_contents"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 398)
+(!srcfileloc  "cgraph.h" 400)
 nil )
 (!pair  "by_ref"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 401)
+(!srcfileloc  "cgraph.h" 403)
 nil ))
 nil 511 nil )
 )
 
-(!srcfileloc  "cgraph.h" 416)
+(!srcfileloc  "cgraph.h" 418)
 nil )
 (!pair  "aux"
 (!type already_seen 10)
 
-(!srcfileloc  "cgraph.h" 417)
+(!srcfileloc  "cgraph.h" 419)
 
 (!options 
 (!option skip string  "")
@@ -20646,42 +20651,42 @@ nil )
 (!pair  "inline_failed"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 420)
+(!srcfileloc  "cgraph.h" 422)
 nil )
 (!pair  "lto_stmt_uid"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 423)
+(!srcfileloc  "cgraph.h" 425)
 nil )
 (!pair  "frequency"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 427)
+(!srcfileloc  "cgraph.h" 429)
 nil )
 (!pair  "uid"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 429)
+(!srcfileloc  "cgraph.h" 431)
 nil )
 (!pair  "indirect_inlining_edge"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 431)
+(!srcfileloc  "cgraph.h" 433)
 nil )
 (!pair  "indirect_unknown_callee"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 434)
+(!srcfileloc  "cgraph.h" 436)
 nil )
 (!pair  "call_stmt_cannot_inline_p"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 437)
+(!srcfileloc  "cgraph.h" 439)
 nil )
 (!pair  "can_throw_external"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 439)
+(!srcfileloc  "cgraph.h" 441)
 nil ))
 
 (!options 
@@ -20692,22 +20697,22 @@ nil ))
 511 nil )
 )
 
-(!srcfileloc  "cgraph.h" 207)
+(!srcfileloc  "cgraph.h" 209)
 nil )
 (!pair  "callers"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 208)
+(!srcfileloc  "cgraph.h" 210)
 nil )
 (!pair  "indirect_calls"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 211)
+(!srcfileloc  "cgraph.h" 213)
 nil )
 (!pair  "origin"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 215)
+(!srcfileloc  "cgraph.h" 217)
 
 (!options 
 (!option nested_ptr nested 
@@ -20718,7 +20723,7 @@ nil )
 (!pair  "nested"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 219)
+(!srcfileloc  "cgraph.h" 221)
 
 (!options 
 (!option nested_ptr nested 
@@ -20729,7 +20734,7 @@ nil )
 (!pair  "next_nested"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 223)
+(!srcfileloc  "cgraph.h" 225)
 
 (!options 
 (!option nested_ptr nested 
@@ -20740,22 +20745,22 @@ nil )
 (!pair  "next_sibling_clone"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 225)
+(!srcfileloc  "cgraph.h" 227)
 nil )
 (!pair  "prev_sibling_clone"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 226)
+(!srcfileloc  "cgraph.h" 228)
 nil )
 (!pair  "clones"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 227)
+(!srcfileloc  "cgraph.h" 229)
 nil )
 (!pair  "clone_of"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 228)
+(!srcfileloc  "cgraph.h" 230)
 nil )
 (!pair  "call_site_hash"
 (!type pointer 938 nil  gc_used
@@ -20768,7 +20773,7 @@ nil )
 nil nil nil nil nil nil nil nil nil nil )
 )
 
-(!srcfileloc  "cgraph.h" 231)
+(!srcfileloc  "cgraph.h" 233)
 
 (!options 
 (!option param_is type 
@@ -20779,11 +20784,11 @@ nil nil nil nil nil nil nil nil nil nil )
 (!pair  "former_clone_of"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 233)
+(!srcfileloc  "cgraph.h" 235)
 nil )
 (!pair  "ipa_transforms_to_apply"
 (!type user_struct 940 nil  gc_unused "vec<ipa_opt_pass>"
-(!srcfileloc  "cgraph.h" 238)
+(!srcfileloc  "cgraph.h" 240)
 
 (!fields 1 
 (!pair  "ipa_opt_pass"
@@ -20795,11 +20800,11 @@ nil )
 nil 0 nil )
 )
 
-(!srcfileloc  "cgraph.h" 238)
+(!srcfileloc  "cgraph.h" 240)
 nil ))
 )
 
-(!srcfileloc  "cgraph.h" 238)
+(!srcfileloc  "cgraph.h" 240)
 
 (!options 
 (!option skip string  "")
@@ -20807,74 +20812,74 @@ nil ))
 )
 (!pair  "local"
 (!type struct 943 nil  gc_used "cgraph_local_info"
-(!srcfileloc  "cgraph.h" 159)
+(!srcfileloc  "cgraph.h" 161)
 
 (!fields 6 
 (!pair  "local"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 141)
+(!srcfileloc  "cgraph.h" 143)
 nil )
 (!pair  "finalized"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 144)
+(!srcfileloc  "cgraph.h" 146)
 nil )
 (!pair  "versionable"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 147)
+(!srcfileloc  "cgraph.h" 149)
 nil )
 (!pair  "can_change_signature"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 151)
+(!srcfileloc  "cgraph.h" 153)
 nil )
 (!pair  "redefined_extern_inline"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 155)
+(!srcfileloc  "cgraph.h" 157)
 nil )
 (!pair  "tm_may_enter_irr"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 158)
-nil ))
-nil 511 nil )
-
-(!srcfileloc  "cgraph.h" 240)
-nil )
-(!pair  "global"
-(!type struct 944 nil  gc_used "cgraph_global_info"
-(!srcfileloc  "cgraph.h" 168)
-
-(!fields 1 
-(!pair  "inlined_to"
-(!type already_seen 915)
-
-(!srcfileloc  "cgraph.h" 167)
-nil ))
-nil 511 nil )
-
-(!srcfileloc  "cgraph.h" 241)
-nil )
-(!pair  "rtl"
-(!type struct 945 nil  gc_used "cgraph_rtl_info"
-(!srcfileloc  "cgraph.h" 175)
-
-(!fields 1 
-(!pair  "preferred_incoming_stack_boundary"
-(!type already_seen 9)
-
-(!srcfileloc  "cgraph.h" 174)
+(!srcfileloc  "cgraph.h" 160)
 nil ))
 nil 511 nil )
 
 (!srcfileloc  "cgraph.h" 242)
 nil )
+(!pair  "global"
+(!type struct 944 nil  gc_used "cgraph_global_info"
+(!srcfileloc  "cgraph.h" 170)
+
+(!fields 1 
+(!pair  "inlined_to"
+(!type already_seen 915)
+
+(!srcfileloc  "cgraph.h" 169)
+nil ))
+nil 511 nil )
+
+(!srcfileloc  "cgraph.h" 243)
+nil )
+(!pair  "rtl"
+(!type struct 945 nil  gc_used "cgraph_rtl_info"
+(!srcfileloc  "cgraph.h" 177)
+
+(!fields 1 
+(!pair  "preferred_incoming_stack_boundary"
+(!type already_seen 9)
+
+(!srcfileloc  "cgraph.h" 176)
+nil ))
+nil 511 nil )
+
+(!srcfileloc  "cgraph.h" 244)
+nil )
 (!pair  "clone"
 (!type struct 946 nil  gc_used "cgraph_clone_info"
-(!srcfileloc  "cgraph.h" 199)
+(!srcfileloc  "cgraph.h" 201)
 
 (!fields 3 
 (!pair  "tree_map"
@@ -20882,179 +20887,179 @@ nil )
 (!type user_struct 948 
 (!type already_seen 947)
  gc_pointed_to "vec<ipa_replace_map_p,va_gc>"
-(!srcfileloc  "cgraph.h" 196)
+(!srcfileloc  "cgraph.h" 198)
 
 (!fields 2 
 (!pair  "va_gc"
 (!type already_seen 3)
 
-(!srcfileloc  "cgraph.h" 196)
+(!srcfileloc  "cgraph.h" 198)
 nil )
 (!pair  "ipa_replace_map_p"
 (!type pointer 949 nil  gc_used
 (!type struct 950 
 (!type already_seen 949)
  gc_pointed_to "ipa_replace_map"
-(!srcfileloc  "cgraph.h" 191)
+(!srcfileloc  "cgraph.h" 193)
 
 (!fields 5 
 (!pair  "old_tree"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 182)
+(!srcfileloc  "cgraph.h" 184)
 nil )
 (!pair  "new_tree"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 184)
+(!srcfileloc  "cgraph.h" 186)
 nil )
 (!pair  "parm_num"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 186)
+(!srcfileloc  "cgraph.h" 188)
 nil )
 (!pair  "replace_p"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 188)
+(!srcfileloc  "cgraph.h" 190)
 nil )
 (!pair  "ref_p"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 190)
+(!srcfileloc  "cgraph.h" 192)
 nil ))
 nil 511 nil )
 )
 
-(!srcfileloc  "cgraph.h" 196)
+(!srcfileloc  "cgraph.h" 198)
 nil ))
 )
 )
 
-(!srcfileloc  "cgraph.h" 196)
+(!srcfileloc  "cgraph.h" 198)
 nil )
 (!pair  "args_to_skip"
 (!type already_seen 120)
 
-(!srcfileloc  "cgraph.h" 197)
+(!srcfileloc  "cgraph.h" 199)
 nil )
 (!pair  "combined_args_to_skip"
 (!type already_seen 120)
 
-(!srcfileloc  "cgraph.h" 198)
+(!srcfileloc  "cgraph.h" 200)
 nil ))
 nil 511 nil )
 
-(!srcfileloc  "cgraph.h" 243)
+(!srcfileloc  "cgraph.h" 245)
 nil )
 (!pair  "thunk"
 (!type struct 951 nil  gc_used "cgraph_thunk_info"
-(!srcfileloc  "cgraph.h" 133)
+(!srcfileloc  "cgraph.h" 135)
 
 (!fields 6 
 (!pair  "fixed_offset"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 126)
+(!srcfileloc  "cgraph.h" 128)
 nil )
 (!pair  "virtual_value"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 127)
+(!srcfileloc  "cgraph.h" 129)
 nil )
 (!pair  "alias"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 128)
+(!srcfileloc  "cgraph.h" 130)
 nil )
 (!pair  "this_adjusting"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 129)
+(!srcfileloc  "cgraph.h" 131)
 nil )
 (!pair  "virtual_offset_p"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 130)
+(!srcfileloc  "cgraph.h" 132)
 nil )
 (!pair  "thunk_p"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 132)
+(!srcfileloc  "cgraph.h" 134)
 nil ))
 nil 511 nil )
 
-(!srcfileloc  "cgraph.h" 244)
+(!srcfileloc  "cgraph.h" 246)
 nil )
 (!pair  "count"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 247)
+(!srcfileloc  "cgraph.h" 249)
 nil )
 (!pair  "count_materialization_scale"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 250)
+(!srcfileloc  "cgraph.h" 252)
 nil )
 (!pair  "uid"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 252)
+(!srcfileloc  "cgraph.h" 254)
 nil )
 (!pair  "abstract_and_needed"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 256)
+(!srcfileloc  "cgraph.h" 258)
 nil )
 (!pair  "lowered"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 258)
+(!srcfileloc  "cgraph.h" 260)
 nil )
 (!pair  "analyzed"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 261)
+(!srcfileloc  "cgraph.h" 263)
 nil )
 (!pair  "process"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 263)
+(!srcfileloc  "cgraph.h" 265)
 nil )
 (!pair  "alias"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 265)
+(!srcfileloc  "cgraph.h" 267)
 nil )
 (!pair  "same_body_alias"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 267)
+(!srcfileloc  "cgraph.h" 269)
 nil )
 (!pair  "frequency"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 270)
+(!srcfileloc  "cgraph.h" 272)
 nil )
 (!pair  "only_called_at_startup"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 272)
+(!srcfileloc  "cgraph.h" 274)
 nil )
 (!pair  "only_called_at_exit"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 274)
+(!srcfileloc  "cgraph.h" 276)
 nil )
 (!pair  "tm_clone"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 279)
+(!srcfileloc  "cgraph.h" 281)
 nil )
 (!pair  "dispatcher_function"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 281)
+(!srcfileloc  "cgraph.h" 283)
 nil ))
 nil 511 nil )
 )
@@ -21480,7 +21485,7 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1001 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:26401"nil 
+(!type struct 1001 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:26405"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -21488,15 +21493,15 @@ nil 0 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1003 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:20028"nil 
+(!type struct 1003 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:20032"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1004 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:2182"nil 
+(!type struct 1004 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:2186"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1005 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:1219"nil 
+(!type struct 1005 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/config/arm/arm.c:1223"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -23470,23 +23475,23 @@ nil 0 nil )
 (!type already_seen 1253)
 )
  gc_pointed_to "constant_descriptor_tree"
-(!srcfileloc  "cgraph.h" 1142)
+(!srcfileloc  "cgraph.h" 1144)
 
 (!fields 3 
 (!pair  "rtl"
 (!type already_seen 136)
 
-(!srcfileloc  "cgraph.h" 1133)
+(!srcfileloc  "cgraph.h" 1135)
 nil )
 (!pair  "value"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 1136)
+(!srcfileloc  "cgraph.h" 1138)
 nil )
 (!pair  "hash"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 1141)
+(!srcfileloc  "cgraph.h" 1143)
 nil ))
 nil 511 nil )
 
@@ -23511,33 +23516,33 @@ nil 0 nil )
 (!type already_seen 1259)
 )
  gc_pointed_to "asm_node"
-(!srcfileloc  "cgraph.h" 478)
+(!srcfileloc  "cgraph.h" 480)
 
 (!fields 3 
 (!pair  "next"
 (!type already_seen 1260)
 
-(!srcfileloc  "cgraph.h" 473)
+(!srcfileloc  "cgraph.h" 475)
 nil )
 (!pair  "asm_str"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 475)
+(!srcfileloc  "cgraph.h" 477)
 nil )
 (!pair  "order"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 477)
+(!srcfileloc  "cgraph.h" 479)
 nil ))
 nil 511 nil )
 
 (!type already_seen 937)
 
-(!type struct 1261 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/cgraph.h:363"nil 
+(!type struct 1261 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/cgraph.h:365"nil 
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1262 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/cgraph.h:356"nil 
+(!type struct 1262 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/cgraph.h:358"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -23562,28 +23567,28 @@ nil 0 nil )
 (!type already_seen 1267)
 )
  gc_pointed_to "cgraph_function_version_info"
-(!srcfileloc  "cgraph.h" 310)
+(!srcfileloc  "cgraph.h" 312)
 
 (!fields 4 
 (!pair  "this_node"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 291)
+(!srcfileloc  "cgraph.h" 293)
 nil )
 (!pair  "prev"
 (!type already_seen 1268)
 
-(!srcfileloc  "cgraph.h" 295)
+(!srcfileloc  "cgraph.h" 297)
 nil )
 (!pair  "next"
 (!type already_seen 1268)
 
-(!srcfileloc  "cgraph.h" 299)
+(!srcfileloc  "cgraph.h" 301)
 nil )
 (!pair  "dispatcher_resolver"
 (!type already_seen 5)
 
-(!srcfileloc  "cgraph.h" 309)
+(!srcfileloc  "cgraph.h" 311)
 nil ))
 nil 511 nil )
 
@@ -24436,7 +24441,7 @@ nil 0 nil )
 (!type already_seen 871)
 
 (!type struct 1309 nil  gc_used "builtin_info_type_d"
-(!srcfileloc  "tree.h" 6491)
+(!srcfileloc  "tree.h" 6496)
 
 (!fields 2 
 (!pair  "decl"
@@ -24444,14 +24449,14 @@ nil 0 nil )
 (!type already_seen 5)
 )
 
-(!srcfileloc  "tree.h" 6489)
+(!srcfileloc  "tree.h" 6494)
 nil )
 (!pair  "implicit_p"
 (!type array 1311 nil  gc_used "(int)END_BUILTINS" 
 (!type already_seen 9)
 )
 
-(!srcfileloc  "tree.h" 6490)
+(!srcfileloc  "tree.h" 6495)
 nil ))
 nil 511 nil )
 
@@ -24468,27 +24473,27 @@ nil 0 nil )
 (!type already_seen 1314)
 )
  gc_pointed_to "tree_vec_map"
-(!srcfileloc  "tree.h" 6316)
+(!srcfileloc  "tree.h" 6321)
 
 (!fields 2 
 (!pair  "base"
 (!type struct 1316 nil  gc_used "tree_map_base"
-(!srcfileloc  "tree.h" 6258)
+(!srcfileloc  "tree.h" 6263)
 
 (!fields 1 
 (!pair  "from"
 (!type already_seen 5)
 
-(!srcfileloc  "tree.h" 6257)
+(!srcfileloc  "tree.h" 6262)
 nil ))
 nil 511 nil )
 
-(!srcfileloc  "tree.h" 6314)
+(!srcfileloc  "tree.h" 6319)
 nil )
 (!pair  "to"
 (!type already_seen 45)
 
-(!srcfileloc  "tree.h" 6315)
+(!srcfileloc  "tree.h" 6320)
 nil ))
 nil 511 nil )
 
@@ -24497,23 +24502,23 @@ nil 511 nil )
 (!type already_seen 1317)
 )
  gc_pointed_to "tree_priority_map"
-(!srcfileloc  "tree.h" 6305)
+(!srcfileloc  "tree.h" 6310)
 
 (!fields 3 
 (!pair  "base"
 (!type already_seen 1316)
 
-(!srcfileloc  "tree.h" 6302)
+(!srcfileloc  "tree.h" 6307)
 nil )
 (!pair  "init"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6303)
+(!srcfileloc  "tree.h" 6308)
 nil )
 (!pair  "fini"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6304)
+(!srcfileloc  "tree.h" 6309)
 nil ))
 nil 511 nil )
 
@@ -24522,18 +24527,18 @@ nil 511 nil )
 (!type already_seen 1319)
 )
  gc_pointed_to "tree_int_map"
-(!srcfileloc  "tree.h" 6293)
+(!srcfileloc  "tree.h" 6298)
 
 (!fields 2 
 (!pair  "base"
 (!type already_seen 1316)
 
-(!srcfileloc  "tree.h" 6291)
+(!srcfileloc  "tree.h" 6296)
 nil )
 (!pair  "to"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6292)
+(!srcfileloc  "tree.h" 6297)
 nil ))
 nil 511 nil )
 
@@ -24542,18 +24547,18 @@ nil 511 nil )
 (!type already_seen 1321)
 )
  gc_pointed_to "tree_decl_map"
-(!srcfileloc  "tree.h" 6282)
+(!srcfileloc  "tree.h" 6287)
 
 (!fields 2 
 (!pair  "base"
 (!type already_seen 1316)
 
-(!srcfileloc  "tree.h" 6280)
+(!srcfileloc  "tree.h" 6285)
 nil )
 (!pair  "to"
 (!type already_seen 5)
 
-(!srcfileloc  "tree.h" 6281)
+(!srcfileloc  "tree.h" 6286)
 nil ))
 nil 511 nil )
 
@@ -24562,23 +24567,23 @@ nil 511 nil )
 (!type already_seen 1323)
 )
  gc_pointed_to "tree_map"
-(!srcfileloc  "tree.h" 6271)
+(!srcfileloc  "tree.h" 6276)
 
 (!fields 3 
 (!pair  "base"
 (!type already_seen 1316)
 
-(!srcfileloc  "tree.h" 6268)
+(!srcfileloc  "tree.h" 6273)
 nil )
 (!pair  "hash"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6269)
+(!srcfileloc  "tree.h" 6274)
 nil )
 (!pair  "to"
 (!type already_seen 5)
 
-(!srcfileloc  "tree.h" 6270)
+(!srcfileloc  "tree.h" 6275)
 nil ))
 nil 511 nil )
 
@@ -24588,7 +24593,7 @@ nil 511 nil )
 (!fields 0 )
 nil 0 nil )
 
-(!type struct 1326 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/tree.h:5534"nil 
+(!type struct 1326 nil  gc_unused "anonymous:../.././../gcc/gcc-SaberMod/gcc/tree.h:5539"nil 
 (!fields 0 )
 nil 0 nil )
 
@@ -26883,42 +26888,42 @@ nil )
 (!pair  "arm_mangle_map_entry"
 (!type already_seen 1001)
 
-(!srcfileloc  "config/arm/arm.c" 26405)
+(!srcfileloc  "config/arm/arm.c" 26409)
 nil )
 (!pair  "builtin_arg"
 (!type already_seen 9)
 
-(!srcfileloc  "config/arm/arm.c" 21658)
+(!srcfileloc  "config/arm/arm.c" 21662)
 nil )
 (!pair  "neon_builtin_datum"
 (!type already_seen 1003)
 
-(!srcfileloc  "config/arm/arm.c" 20034)
+(!srcfileloc  "config/arm/arm.c" 20038)
 nil )
 (!pair  "neon_itype"
 (!type already_seen 9)
 
-(!srcfileloc  "config/arm/arm.c" 20026)
+(!srcfileloc  "config/arm/arm.c" 20030)
 nil )
 (!pair  "neon_builtin_type_mode"
 (!type already_seen 9)
 
-(!srcfileloc  "config/arm/arm.c" 19957)
+(!srcfileloc  "config/arm/arm.c" 19961)
 nil )
 (!pair  "arm_pragma_enum"
 (!type already_seen 9)
 
-(!srcfileloc  "config/arm/arm.c" 5094)
+(!srcfileloc  "config/arm/arm.c" 5098)
 nil )
 (!pair  "isr_attribute_arg"
 (!type already_seen 1004)
 
-(!srcfileloc  "config/arm/arm.c" 2186)
+(!srcfileloc  "config/arm/arm.c" 2190)
 nil )
 (!pair  "arm_fixed_mode_set"
 (!type already_seen 1005)
 
-(!srcfileloc  "config/arm/arm.c" 1222)
+(!srcfileloc  "config/arm/arm.c" 1226)
 nil )
 (!pair  "Mfix"
 (!type already_seen 1009)
@@ -27673,77 +27678,77 @@ nil )
 (!pair  "cgraph_2node_hook"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 634)
+(!srcfileloc  "cgraph.h" 636)
 nil )
 (!pair  "cgraph_2edge_hook"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 632)
+(!srcfileloc  "cgraph.h" 634)
 nil )
 (!pair  "cgraph_node_hook"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 630)
+(!srcfileloc  "cgraph.h" 632)
 nil )
 (!pair  "cgraph_edge_hook"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 629)
+(!srcfileloc  "cgraph.h" 631)
 nil )
 (!pair  "cgraph_edge_p"
 (!type already_seen 934)
 
-(!srcfileloc  "cgraph.h" 445)
+(!srcfileloc  "cgraph.h" 447)
 nil )
 (!pair  "cgraph_inline_failed_t"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 373)
+(!srcfileloc  "cgraph.h" 375)
 nil )
 (!pair  "varpool_node_set_iterator"
 (!type already_seen 1261)
 
-(!srcfileloc  "cgraph.h" 366)
+(!srcfileloc  "cgraph.h" 368)
 nil )
 (!pair  "cgraph_node_set_iterator"
 (!type already_seen 1262)
 
-(!srcfileloc  "cgraph.h" 359)
+(!srcfileloc  "cgraph.h" 361)
 nil )
 (!pair  "varpool_node_set"
 (!type already_seen 1264)
 
-(!srcfileloc  "cgraph.h" 351)
+(!srcfileloc  "cgraph.h" 353)
 nil )
 (!pair  "cgraph_node_set"
 (!type already_seen 1266)
 
-(!srcfileloc  "cgraph.h" 348)
+(!srcfileloc  "cgraph.h" 350)
 nil )
 (!pair  "varpool_node_ptr"
 (!type already_seen 927)
 
-(!srcfileloc  "cgraph.h" 337)
+(!srcfileloc  "cgraph.h" 339)
 nil )
 (!pair  "cgraph_node_ptr"
 (!type already_seen 915)
 
-(!srcfileloc  "cgraph.h" 285)
+(!srcfileloc  "cgraph.h" 287)
 nil )
 (!pair  "vec<ipa_opt_pass>"
 (!type already_seen 940)
 
-(!srcfileloc  "cgraph.h" 238)
+(!srcfileloc  "cgraph.h" 240)
 nil )
 (!pair  "vec<ipa_replace_map_p,va_gc>"
 (!type already_seen 948)
 
-(!srcfileloc  "cgraph.h" 196)
+(!srcfileloc  "cgraph.h" 198)
 nil )
 (!pair  "ipa_replace_map_p"
 (!type already_seen 949)
 
-(!srcfileloc  "cgraph.h" 192)
+(!srcfileloc  "cgraph.h" 194)
 nil )
 (!pair  "vec<ipa_ref_ptr>"
 (!type already_seen 928)
@@ -27920,37 +27925,37 @@ nil )
 (!pair  "builtin_info_type"
 (!type already_seen 1309)
 
-(!srcfileloc  "tree.h" 6491)
+(!srcfileloc  "tree.h" 6496)
 nil )
 (!pair  "const_call_expr_arg_iterator"
 (!type already_seen 1312)
 
-(!srcfileloc  "tree.h" 6385)
+(!srcfileloc  "tree.h" 6390)
 nil )
 (!pair  "call_expr_arg_iterator"
 (!type already_seen 1313)
 
-(!srcfileloc  "tree.h" 6379)
+(!srcfileloc  "tree.h" 6384)
 nil )
 (!pair  "tree_node_kind"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6240)
+(!srcfileloc  "tree.h" 6245)
 nil )
 (!pair  "walk_tree_lh"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6202)
+(!srcfileloc  "tree.h" 6207)
 nil )
 (!pair  "walk_tree_fn"
 (!type already_seen 9)
 
-(!srcfileloc  "tree.h" 6197)
+(!srcfileloc  "tree.h" 6202)
 nil )
 (!pair  "function_args_iterator"
 (!type already_seen 1326)
 
-(!srcfileloc  "tree.h" 5536)
+(!srcfileloc  "tree.h" 5541)
 nil )
 (!pair  "record_layout_info"
 (!type already_seen 1328)
@@ -28015,27 +28020,27 @@ nil )
 (!pair  "hash_rtx_callback_function"
 (!type already_seen 9)
 
-(!srcfileloc  "rtl.h" 2104)
+(!srcfileloc  "rtl.h" 2103)
 nil )
 (!pair  "rtx_equal_p_callback_function"
 (!type already_seen 9)
 
-(!srcfileloc  "rtl.h" 2099)
+(!srcfileloc  "rtl.h" 2098)
 nil )
 (!pair  "for_each_inc_dec_fn"
 (!type already_seen 9)
 
-(!srcfileloc  "rtl.h" 2095)
+(!srcfileloc  "rtl.h" 2094)
 nil )
 (!pair  "rtx_function"
 (!type already_seen 9)
 
-(!srcfileloc  "rtl.h" 2084)
+(!srcfileloc  "rtl.h" 2083)
 nil )
 (!pair  "replace_label_data"
 (!type already_seen 1339)
 
-(!srcfileloc  "rtl.h" 2011)
+(!srcfileloc  "rtl.h" 2010)
 nil )
 (!pair  "va_gc"
 (!type already_seen 3)
@@ -30119,7 +30124,7 @@ nil )
 (!pair  "the_parser"
 (!type already_seen 694)
 
-(!srcfileloc  "cp/parser.c" 28368)
+(!srcfileloc  "cp/parser.c" 28371)
 nil )
 (!pair  "lambda_scope_stack"
 (!type already_seen 689)
@@ -30299,7 +30304,7 @@ nil )
 (!pair  "start_cleanup_cnt"
 (!type already_seen 9)
 
-(!srcfileloc  "cp/decl.c" 6686)
+(!srcfileloc  "cp/decl.c" 6687)
 nil )
 (!pair  "typename_htab"
 (!type already_seen 53)
@@ -30506,14 +30511,14 @@ nil )
 (!pair  "lazy_hex_fp_value_count"
 (!type already_seen 9)
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1032)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1034)
 nil )
 (!pair  "lazy_hex_fp_values"
 (!type array 1488 nil  gc_used "12" 
 (!type already_seen 777)
 )
 
-(!srcfileloc  "c-family/c-cppbuiltin.c" 1031)
+(!srcfileloc  "c-family/c-cppbuiltin.c" 1033)
 nil )
 (!pair  "pending_lang_change"
 (!type already_seen 9)
@@ -30958,22 +30963,22 @@ nil )
 (!type already_seen 5)
 )
 
-(!srcfileloc  "config/arm/arm.c" 20391)
+(!srcfileloc  "config/arm/arm.c" 20395)
 nil )
 (!pair  "tls_get_addr_libfunc"
 (!type already_seen 136)
 
-(!srcfileloc  "config/arm/arm.c" 6405)
+(!srcfileloc  "config/arm/arm.c" 6409)
 nil )
 (!pair  "pic_labelno"
 (!type already_seen 9)
 
-(!srcfileloc  "config/arm/arm.c" 5687)
+(!srcfileloc  "config/arm/arm.c" 5691)
 nil )
 (!pair  "va_list_type"
 (!type already_seen 5)
 
-(!srcfileloc  "config/arm/arm.c" 1546)
+(!srcfileloc  "config/arm/arm.c" 1550)
 nil )
 (!pair  "stack_chk_fail_decl"
 (!type already_seen 5)
@@ -31326,14 +31331,14 @@ nil )
 (!pair  "gcc_eh_personality_decl"
 (!type already_seen 5)
 
-(!srcfileloc  "tree.c" 11459)
+(!srcfileloc  "tree.c" 11473)
 nil )
 (!pair  "nonstandard_integer_type_cache"
 (!type array 1502 nil  gc_used "2 * MAX_INT_CACHED_PREC + 2" 
 (!type already_seen 5)
 )
 
-(!srcfileloc  "tree.c" 7333)
+(!srcfileloc  "tree.c" 7347)
 nil )
 (!pair  "init_priority_for_decl"
 (!type already_seen 1422)
@@ -32357,32 +32362,32 @@ nil )
 (!pair  "symtab_order"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 535)
+(!srcfileloc  "cgraph.h" 537)
 nil )
 (!pair  "asm_nodes"
 (!type already_seen 1260)
 
-(!srcfileloc  "cgraph.h" 534)
+(!srcfileloc  "cgraph.h" 536)
 nil )
 (!pair  "cgraph_edge_max_uid"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 513)
+(!srcfileloc  "cgraph.h" 515)
 nil )
 (!pair  "cgraph_max_uid"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 512)
+(!srcfileloc  "cgraph.h" 514)
 nil )
 (!pair  "cgraph_n_nodes"
 (!type already_seen 9)
 
-(!srcfileloc  "cgraph.h" 511)
+(!srcfileloc  "cgraph.h" 513)
 nil )
 (!pair  "symtab_nodes"
 (!type already_seen 924)
 
-(!srcfileloc  "cgraph.h" 510)
+(!srcfileloc  "cgraph.h" 512)
 nil )
 (!pair  "in_cold_section_p"
 (!type already_seen 9)
@@ -32507,17 +32512,17 @@ nil )
 (!pair  "builtin_info"
 (!type already_seen 1309)
 
-(!srcfileloc  "tree.h" 6493)
+(!srcfileloc  "tree.h" 6498)
 nil )
 (!pair  "current_function_func_begin_label"
 (!type already_seen 36)
 
-(!srcfileloc  "tree.h" 5531)
+(!srcfileloc  "tree.h" 5536)
 nil )
 (!pair  "current_function_decl"
 (!type already_seen 5)
 
-(!srcfileloc  "tree.h" 5528)
+(!srcfileloc  "tree.h" 5533)
 nil )
 (!pair  "sizetype_tab"
 (!type array 1505 nil  gc_used "(int) stk_type_kind_last" 
@@ -32553,32 +32558,32 @@ nil )
 (!pair  "stack_limit_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2734)
+(!srcfileloc  "rtl.h" 2730)
 nil )
 (!pair  "default_target_rtl"
 (!type already_seen 853)
 
-(!srcfileloc  "rtl.h" 2306)
+(!srcfileloc  "rtl.h" 2305)
 nil )
 (!pair  "simple_return_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2207)
+(!srcfileloc  "rtl.h" 2206)
 nil )
 (!pair  "ret_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2206)
+(!srcfileloc  "rtl.h" 2205)
 nil )
 (!pair  "cc0_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2205)
+(!srcfileloc  "rtl.h" 2204)
 nil )
 (!pair  "pc_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2204)
+(!srcfileloc  "rtl.h" 2203)
 nil )
 (!pair  "const_tiny_rtx"
 (!type array 1508 nil  gc_used "4" 
@@ -32587,19 +32592,19 @@ nil )
 )
 )
 
-(!srcfileloc  "rtl.h" 2191)
+(!srcfileloc  "rtl.h" 2190)
 nil )
 (!pair  "const_true_rtx"
 (!type already_seen 136)
 
-(!srcfileloc  "rtl.h" 2189)
+(!srcfileloc  "rtl.h" 2188)
 nil )
 (!pair  "const_int_rtx"
 (!type array 1510 nil  gc_used "MAX_SAVED_CONST_INT * 2 + 1" 
 (!type already_seen 136)
 )
 
-(!srcfileloc  "rtl.h" 2183)
+(!srcfileloc  "rtl.h" 2182)
 nil )
 (!pair  "gcov_fn_info_ptr_type"
 (!type already_seen 5)

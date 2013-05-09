@@ -124,7 +124,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2013-05-06" "gcc-4.9.0" "GNU"
+.TH GCC 1 "2013-05-09" "gcc-4.9.0" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -428,8 +428,8 @@ in the following sections.
 \&\-fsel\-sched\-pipelining \-fsel\-sched\-pipelining\-outer\-loops 
 \&\-fshrink\-wrap \-fsignaling\-nans \-fsingle\-precision\-constant 
 \&\-fsplit\-ivs\-in\-unroller \-fsplit\-wide\-types \-fstack\-protector 
-\&\-fstack\-protector\-all \-fstrict\-aliasing \-fstrict\-overflow 
-\&\-fthread\-jumps \-ftracer \-ftree\-bit\-ccp 
+\&\-fstack\-protector\-all \-fstack\-protector\-strong \-fstrict\-aliasing 
+\&\-fstrict\-overflow \-fthread\-jumps \-ftracer \-ftree\-bit\-ccp 
 \&\-ftree\-builtin\-call\-dce \-ftree\-ccp \-ftree\-ch 
 \&\-ftree\-coalesce\-inline\-vars \-ftree\-coalesce\-vars \-ftree\-copy\-prop 
 \&\-ftree\-copyrename \-ftree\-dce \-ftree\-dominator\-opts \-ftree\-dse 
@@ -8218,6 +8218,11 @@ If a guard check fails, an error message is printed and the program exits.
 .IP "\fB\-fstack\-protector\-all\fR" 4
 .IX Item "-fstack-protector-all"
 Like \fB\-fstack\-protector\fR except that all functions are protected.
+.IP "\fB\-fstack\-protector\-strong\fR" 4
+.IX Item "-fstack-protector-strong"
+Like \fB\-fstack\-protector\fR but includes additional functions to
+be protected \-\-\- those that have local array definitions, or have
+references to local frame addresses.
 .IP "\fB\-fsection\-anchors\fR" 4
 .IX Item "-fsection-anchors"
 Try to reduce the number of symbolic address calculations by using
