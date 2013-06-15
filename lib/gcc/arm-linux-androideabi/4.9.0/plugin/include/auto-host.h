@@ -200,6 +200,12 @@
 #endif
 
 
+/* Define to 1 if `TIOCGWINSZ' requires <sys/ioctl.h>. */
+#ifndef USED_FOR_TARGET
+#define GWINSZ_IN_SYS_IOCTL 1
+#endif
+
+
 /* mcontext_t fields start with __ */
 #ifndef USED_FOR_TARGET
 /* #undef HAS_MCONTEXT_T_UNDERSCORES */
@@ -1248,7 +1254,7 @@
 #endif
 
 
-/* Define if your AIX linker supports a large TOC. */
+/* Define if your PowerPC64 linker supports a large TOC. */
 #ifndef USED_FOR_TARGET
 /* #undef HAVE_LD_LARGE_TOC */
 #endif

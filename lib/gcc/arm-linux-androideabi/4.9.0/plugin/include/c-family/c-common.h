@@ -538,6 +538,9 @@ extern tree pushdecl_top_level (tree);
 extern tree pushdecl (tree);
 extern tree build_modify_expr (location_t, tree, tree, enum tree_code,
 			       location_t, tree, tree);
+extern tree build_array_notation_expr (location_t, tree, tree, enum tree_code,
+				       location_t, tree, tree);
+extern tree build_array_notation_ref (location_t, tree, tree, tree, tree, tree);
 extern tree build_indirect_ref (location_t, tree, ref_operator);
 
 extern int field_decl_cmp (const void *, const void *);
@@ -1133,4 +1136,47 @@ enum stv_conv {
 extern enum stv_conv scalar_to_vector (location_t loc, enum tree_code code,
 				       tree op0, tree op1, bool);
 
+/* These #defines allow users to access different operands of the
+   array notation tree.  */
+
+#define ARRAY_NOTATION_CHECK(NODE) TREE_CHECK (NODE, ARRAY_NOTATION_REF)
+#define ARRAY_NOTATION_ARRAY(NODE) \
+  TREE_OPERAND (ARRAY_NOTATION_CHECK (NODE), 0)
+#define ARRAY_NOTATION_START(NODE) \
+  TREE_OPERAND (ARRAY_NOTATION_CHECK (NODE), 1)
+#define ARRAY_NOTATION_LENGTH(NODE) \
+  TREE_OPERAND (ARRAY_NOTATION_CHECK (NODE), 2)
+#define ARRAY_NOTATION_STRIDE(NODE) \
+  TREE_OPERAND (ARRAY_NOTATION_CHECK (NODE), 3)
+
+/* This structure holds all the scalar values and its appropriate variable 
+   replacment.  It is mainly used by the function that pulls all the invariant
+   parts that should be executed only once, which comes with array notation 
+   expressions.  */
+struct inv_list
+{
+  vec<tree, va_gc> *list_values;
+  vec<tree, va_gc> *replacement;
+  vec<enum rid, va_gc> *additional_tcodes; 
+};
+
+/* In array-notation-common.c.  */
+extern HOST_WIDE_INT extract_sec_implicit_index_arg (location_t, tree);
+extern bool is_sec_implicit_index_fn (tree);
+extern void array_notation_init_builtins (void);
+extern struct c_expr fix_array_notation_expr (location_t, enum tree_code, 
+					      struct c_expr);
+extern bool contains_array_notation_expr (tree);
+extern tree expand_array_notation_exprs (tree);
+extern tree fix_conditional_array_notations (tree);
+extern tree find_correct_array_notation_type (tree);
+extern bool length_mismatch_in_expr_p (location_t, tree **, size_t, size_t);
+extern enum built_in_function is_cilkplus_reduce_builtin (tree);
+extern bool find_rank (location_t, tree, tree, bool, size_t *);
+extern void extract_array_notation_exprs (tree, bool, vec<tree, va_gc> **);
+extern void replace_array_notations (tree *, bool, vec<tree, va_gc> *,
+				     vec<tree, va_gc> *);
+extern tree find_inv_trees (tree *, int *, void *);
+extern tree replace_inv_trees (tree *, int *, void *);
+extern tree find_correct_array_notation_type (tree op);
 #endif /* ! GCC_C_COMMON_H */

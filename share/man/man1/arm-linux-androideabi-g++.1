@@ -124,7 +124,7 @@
 .\" ========================================================================
 .\"
 .IX Title "GCC 1"
-.TH GCC 1 "2013-05-12" "gcc-4.9.0" "GNU"
+.TH GCC 1 "2013-06-15" "gcc-4.9.0" "GNU"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -524,7 +524,8 @@ in the following sections.
 \&\fB\-mword\-relocations 
 \&\-mfix\-cortex\-m3\-ldrd 
 \&\-munaligned\-access 
-\&\-mneon\-for\-64bits\fR
+\&\-mneon\-for\-64bits 
+\&\-mrestrict\-it\fR
 .Sp
 \&\fI\s-1AVR\s0 Options\fR
 \&\fB\-mmcu=\fR\fImcu\fR \fB\-maccumulate\-args \-mbranch\-cost=\fR\fIcost\fR 
@@ -764,6 +765,7 @@ in the following sections.
 \&\-mno\-float \-msingle\-float  \-mdouble\-float  
 \&\-mdsp  \-mno\-dsp  \-mdspr2  \-mno\-dspr2 
 \&\-mmcu \-mmno\-mcu 
+\&\-meva \-mno\-eva 
 \&\-mmicromips \-mno\-micromips 
 \&\-mfpu=\fR\fIfpu-type\fR 
 \&\fB\-msmartmips  \-mno\-smartmips 
@@ -872,7 +874,10 @@ See \s-1RS/6000\s0 and PowerPC Options.
 \&\-mno\-recip\-precision 
 \&\-mveclibabi=\fR\fItype\fR \fB\-mfriz \-mno\-friz 
 \&\-mpointers\-to\-nested\-functions \-mno\-pointers\-to\-nested\-functions 
-\&\-msave\-toc\-indirect \-mno\-save\-toc\-indirect\fR
+\&\-msave\-toc\-indirect \-mno\-save\-toc\-indirect 
+\&\-mpower8\-fusion \-mno\-mpower8\-fusion \-mpower8\-vector \-mno\-power8\-vector 
+\&\-mcrypto \-mno\-crypto \-mdirect\-move \-mno\-direct\-move 
+\&\-mquad\-memory \-mno\-quad\-memory\fR
 .Sp
 \&\fI\s-1RX\s0 Options\fR
 \&\fB\-m64bit\-doubles  \-m32bit\-doubles  \-fpu  \-nofpu
@@ -945,7 +950,7 @@ See \s-1RS/6000\s0 and PowerPC Options.
 \&\-mvis2  \-mno\-vis2  \-mvis3  \-mno\-vis3 
 \&\-mcbcond \-mno\-cbcond 
 \&\-mfmaf  \-mno\-fmaf  \-mpopc  \-mno\-popc 
-\&\-mfix\-at697f\fR
+\&\-mfix\-at697f \-mfix\-ut699\fR
 .Sp
 \&\fI\s-1SPU\s0 Options\fR
 \&\fB\-mwarn\-reloc \-merror\-reloc 
@@ -1796,6 +1801,15 @@ compiler generates parallel code according to the OpenMP Application
 Program Interface v3.0 <\fBhttp://www.openmp.org/\fR>.  This option
 implies \fB\-pthread\fR, and thus is only supported on targets that
 have support for \fB\-pthread\fR.
+.IP "\fB\-fcilkplus\fR" 4
+.IX Item "-fcilkplus"
+Enable the usage of Cilk Language extension features for C/\*(C+.  When the flag
+\&\fB\-fcilkplus\fR is specified, all the Cilk Plus components are converted 
+to the appropriate C/\*(C+ code.  The present implementation follows \s-1ABI\s0 version 
+0.9.  There are four major parts to Cilk Plus language 
+extension: Array Notations, Cilk Keywords, \s-1SIMD\s0 annotations and elemental 
+functions.  Detailed information about Cilk Plus can be found at 
+<\fBhttp://www.cilkplus.org\fR>.
 .IP "\fB\-fgnu\-tm\fR" 4
 .IX Item "-fgnu-tm"
 When the option \fB\-fgnu\-tm\fR is specified, the compiler
@@ -5594,7 +5608,7 @@ Controls optimization dumps from various optimization passes. If the
 \&\fB\-\fR\fIoptions\fR form is used, \fIoptions\fR is a list of
 \&\fB\-\fR separated options to select the dump details and
 optimizations.  If \fIoptions\fR is not specified, it defaults to
-\&\fBall\fR for details and \fBoptall\fR for optimization
+\&\fBoptimized\fR for details and \fBoptall\fR for optimization
 groups. If the \fIfilename\fR is not specified, it defaults to
 \&\fIstderr\fR. Note that the output \fIfilename\fR will be overwritten
 in case of multiple translation units. If a combined output from
@@ -10853,6 +10867,11 @@ defined.
 Enables using Neon to handle scalar 64\-bits operations. This is
 disabled by default since the cost of moving data from core registers
 to Neon is high.
+.IP "\fB\-mrestrict\-it\fR" 4
+.IX Item "-mrestrict-it"
+Restricts generation of \s-1IT\s0 blocks to conform to the rules of ARMv8.
+\&\s-1IT\s0 blocks can only contain a single 16\-bit instruction from a select
+set of instructions. This option is on by default for ARMv8 Thumb mode.
 .PP
 \fI\s-1AVR\s0 Options\fR
 .IX Subsection "AVR Options"
@@ -12955,10 +12974,19 @@ Intel Core i7 \s-1CPU\s0 with 64\-bit extensions, \s-1MMX\s0, \s-1SSE\s0, \s-1SS
 Intel Core \s-1CPU\s0 with 64\-bit extensions, \s-1MMX\s0, \s-1SSE\s0, \s-1SSE2\s0, \s-1SSE3\s0, \s-1SSSE3\s0,
 \&\s-1SSE4\s0.1, \s-1SSE4\s0.2, \s-1AVX\s0, \s-1AES\s0, \s-1PCLMUL\s0, \s-1FSGSBASE\s0, \s-1RDRND\s0 and F16C instruction
 set support.
+.IP "\fBcore\-avx2\fR" 4
+.IX Item "core-avx2"
+Intel Core \s-1CPU\s0 with 64\-bit extensions, \s-1MOVBE\s0, \s-1MMX\s0, \s-1SSE\s0, \s-1SSE2\s0, \s-1SSE3\s0, \s-1SSSE3\s0,
+\&\s-1SSE4\s0.1, \s-1SSE4\s0.2, \s-1AVX\s0, \s-1AVX2\s0, \s-1AES\s0, \s-1PCLMUL\s0, \s-1FSGSBASE\s0, \s-1RDRND\s0, \s-1FMA\s0, \s-1BMI\s0, \s-1BMI2\s0
+and F16C instruction set support.
 .IP "\fBatom\fR" 4
 .IX Item "atom"
-Intel Atom \s-1CPU\s0 with 64\-bit extensions, \s-1MMX\s0, \s-1SSE\s0, \s-1SSE2\s0, \s-1SSE3\s0 and \s-1SSSE3\s0
+Intel Atom \s-1CPU\s0 with 64\-bit extensions, \s-1MOVBE\s0, \s-1MMX\s0, \s-1SSE\s0, \s-1SSE2\s0, \s-1SSE3\s0 and \s-1SSSE3\s0
 instruction set support.
+.IP "\fBslm\fR" 4
+.IX Item "slm"
+Intel Silvermont \s-1CPU\s0 with 64\-bit extensions, \s-1MOVBE\s0, \s-1MMX\s0, \s-1SSE\s0, \s-1SSE2\s0, \s-1SSE3\s0, \s-1SSSE3\s0,
+\&\s-1SSE4\s0.1 and \s-1SSE4\s0.2 instruction set support.
 .IP "\fBk6\fR" 4
 .IX Item "k6"
 \&\s-1AMD\s0 K6 \s-1CPU\s0 with \s-1MMX\s0 instruction set support.
@@ -15442,6 +15470,13 @@ Use (do not use) \s-1MT\s0 Multithreading instructions.
 .IX Item "-mno-mcu"
 .PD
 Use (do not use) the \s-1MIPS\s0 \s-1MCU\s0 \s-1ASE\s0 instructions.
+.IP "\fB\-meva\fR" 4
+.IX Item "-meva"
+.PD 0
+.IP "\fB\-mno\-eva\fR" 4
+.IX Item "-mno-eva"
+.PD
+Use (do not use) the \s-1MIPS\s0 Enhanced Virtual Addressing instructions.
 .IP "\fB\-mlong64\fR" 4
 .IX Item "-mlong64"
 Force \f(CW\*(C`long\*(C'\fR types to be 64 bits wide.  See \fB\-mlong32\fR for
@@ -16410,7 +16445,8 @@ following options:
 \&\fB\-maltivec  \-mfprnd  \-mhard\-float  \-mmfcrf  \-mmultiple 
 \&\-mpopcntb \-mpopcntd  \-mpowerpc64 
 \&\-mpowerpc\-gpopt  \-mpowerpc\-gfxopt  \-msingle\-float \-mdouble\-float 
-\&\-msimple\-fpu \-mstring  \-mmulhw  \-mdlmzb  \-mmfpgpr \-mvsx\fR
+\&\-msimple\-fpu \-mstring  \-mmulhw  \-mdlmzb  \-mmfpgpr \-mvsx 
+\&\-mcrypto \-mdirect\-move \-mpower8\-fusion \-mpower8\-vector \-mquad\-memory\fR
 .Sp
 The particular options set for any particular \s-1CPU\s0 varies between
 compiler versions, depending on what setting seems to produce optimal
@@ -16525,6 +16561,52 @@ This option has been deprecated.  Use \fB\-mspe\fR and
 Generate code that uses (does not use) vector/scalar (\s-1VSX\s0)
 instructions, and also enable the use of built-in functions that allow
 more direct access to the \s-1VSX\s0 instruction set.
+.IP "\fB\-mcrypto\fR" 4
+.IX Item "-mcrypto"
+.PD 0
+.IP "\fB\-mno\-crypto\fR" 4
+.IX Item "-mno-crypto"
+.PD
+Enable the use (disable) of the built-in functions that allow direct
+access to the cryptographic instructions that were added in version
+2.07 of the PowerPC \s-1ISA\s0.
+.IP "\fB\-mdirect\-move\fR" 4
+.IX Item "-mdirect-move"
+.PD 0
+.IP "\fB\-mno\-direct\-move\fR" 4
+.IX Item "-mno-direct-move"
+.PD
+Generate code that uses (does not use) the instructions to move data
+between the general purpose registers and the vector/scalar (\s-1VSX\s0)
+registers that were added in version 2.07 of the PowerPC \s-1ISA\s0.
+.IP "\fB\-mpower8\-fusion\fR" 4
+.IX Item "-mpower8-fusion"
+.PD 0
+.IP "\fB\-mno\-power8\-fusion\fR" 4
+.IX Item "-mno-power8-fusion"
+.PD
+Generate code that keeps (does not keeps) some integer operations
+adjacent so that the instructions can be fused together on power8 and
+later processors.
+.IP "\fB\-mpower8\-vector\fR" 4
+.IX Item "-mpower8-vector"
+.PD 0
+.IP "\fB\-mno\-power8\-vector\fR" 4
+.IX Item "-mno-power8-vector"
+.PD
+Generate code that uses (does not use) the vector and scalar
+instructions that were added in version 2.07 of the PowerPC \s-1ISA\s0.  Also
+enable the use of built-in functions that allow more direct access to
+the vector instructions.
+.IP "\fB\-mquad\-memory\fR" 4
+.IX Item "-mquad-memory"
+.PD 0
+.IP "\fB\-mno\-quad\-memory\fR" 4
+.IX Item "-mno-quad-memory"
+.PD
+Generate code that uses (does not use) the quad word memory
+instructions.  The \fB\-mquad\-memory\fR option requires use of
+64\-bit mode.
 .IP "\fB\-mfloat\-gprs=\fR\fIyes/single/double/no\fR" 4
 .IX Item "-mfloat-gprs=yes/single/double/no"
 .PD 0
@@ -18424,6 +18506,10 @@ later.
 .IX Item "-mfix-at697f"
 Enable the documented workaround for the single erratum of the Atmel \s-1AT697F\s0
 processor (which corresponds to erratum #13 of the \s-1AT697E\s0 processor).
+.IP "\fB\-mfix\-ut699\fR" 4
+.IX Item "-mfix-ut699"
+Enable the documented workarounds for the floating-point errata of the \s-1UT699\s0
+processor.
 .PP
 These \fB\-m\fR options are supported in addition to the above
 on \s-1SPARC\-V9\s0 processors in 64\-bit environments:

@@ -1077,6 +1077,12 @@ option.
      whether the `.init_array' and `.fini_array' sections are supported
      and, if they are, use them.
 
+`--enable-link-mutex'
+     When building GCC, use a mutex to avoid linking the compilers for
+     multiple languages at the same time, to avoid thrashing on build
+     systems with limited free memory.  The default is not to use such
+     a mutex.
+
 `--enable-maintainer-mode'
      The build rules that regenerate the Autoconf and Automake output
      files as well as the GCC master message catalog `gcc.pot' are
@@ -3366,8 +3372,10 @@ cross-compilation target only.
 *-*-solaris2*
 =============
 
-Support for Solaris 8 has removed in GCC 4.8.  Support for Solaris 7 has
-been removed in GCC 4.6.
+Support for Solaris 9 has been obsoleted in GCC 4.9, but can still be
+enabled by configuring with `--enable-obsolete'.  Support will be
+removed in GCC 4.10.  Support for Solaris 8 has removed in GCC 4.8.
+Support for Solaris 7 has been removed in GCC 4.6.
 
    Sun does not ship a C compiler with Solaris 2 before Solaris 10,
 though you can download the Sun Studio compilers for free.  In Solaris
@@ -4447,7 +4455,7 @@ Concept Index
 * Menu:
 
 * Binaries:                              Binaries.           (line    6)
-* build_configargs:                      Configuration.      (line 1449)
+* build_configargs:                      Configuration.      (line 1455)
 * Configuration:                         Configuration.      (line    6)
 * configurations supported by GCC:       Configurations.     (line    6)
 * Downloading GCC:                       Downloading the source.
@@ -4457,7 +4465,7 @@ Concept Index
 * FDL, GNU Free Documentation License:   GNU Free Documentation License.
                                                              (line    6)
 * Host specific installation:            Specific.           (line    6)
-* host_configargs:                       Configuration.      (line 1453)
+* host_configargs:                       Configuration.      (line 1459)
 * Installing GCC: Binaries:              Binaries.           (line    6)
 * Installing GCC: Building:              Building.           (line    6)
 * Installing GCC: Configuration:         Configuration.      (line    6)
@@ -4467,7 +4475,7 @@ Concept Index
 * Specific installation notes:           Specific.           (line    6)
 * Target specific installation:          Specific.           (line    6)
 * Target specific installation notes:    Specific.           (line    6)
-* target_configargs:                     Configuration.      (line 1457)
+* target_configargs:                     Configuration.      (line 1463)
 * Testing:                               Testing.            (line    6)
 * Testsuite:                             Testing.            (line    6)
 
@@ -4482,85 +4490,85 @@ Node: Configuration15814
 Ref: with-gnu-as30820
 Ref: with-as31718
 Ref: with-gnu-ld33131
-Node: Building80049
-Node: Testing95534
-Node: Final install103406
-Node: Binaries108720
-Node: Specific110232
-Ref: alpha-x-x110742
-Ref: alpha-dec-osf51111231
-Ref: amd64-x-solaris210111756
-Ref: arm-x-eabi111859
-Ref: avr112070
-Ref: bfin112710
-Ref: cr16112952
-Ref: cris113367
-Ref: dos114183
-Ref: epiphany-x-elf114506
-Ref: x-x-freebsd114611
-Ref: h8300-hms116448
-Ref: hppa-hp-hpux116800
-Ref: hppa-hp-hpux10119171
-Ref: hppa-hp-hpux11119584
-Ref: x-x-linux-gnu125243
-Ref: ix86-x-linux125436
-Ref: ix86-x-solaris29125749
-Ref: ix86-x-solaris210126528
-Ref: ia64-x-linux127719
-Ref: ia64-x-hpux128489
-Ref: x-ibm-aix129044
-Ref: iq2000-x-elf135907
-Ref: lm32-x-elf136047
-Ref: lm32-x-uclinux136151
-Ref: m32c-x-elf136279
-Ref: m32r-x-elf136381
-Ref: m68k-x-x136483
-Ref: m68k-x-uclinux137521
-Ref: mep-x-elf137767
-Ref: microblaze-x-elf137877
-Ref: mips-x-x137996
-Ref: mips-sgi-irix5140392
-Ref: mips-sgi-irix6140472
-Ref: moxie-x-elf140659
-Ref: powerpc-x-x140706
-Ref: powerpc-x-darwin140911
-Ref: powerpc-x-elf141405
-Ref: powerpc-x-linux-gnu141490
-Ref: powerpc-x-netbsd141585
-Ref: powerpc-x-eabisim141673
-Ref: powerpc-x-eabi141799
-Ref: powerpcle-x-elf141875
-Ref: powerpcle-x-eabisim141967
-Ref: powerpcle-x-eabi142100
-Ref: rl78-x-elf142183
-Ref: rx-x-elf142289
-Ref: s390-x-linux142488
-Ref: s390x-x-linux142560
-Ref: s390x-ibm-tpf142647
-Ref: x-x-solaris2142778
-Ref: sparc-x-x147541
-Ref: sparc-sun-solaris2148043
-Ref: sparc-sun-solaris210150797
-Ref: sparc-x-linux151173
-Ref: sparc64-x-solaris2151398
-Ref: sparcv9-x-solaris2152051
-Ref: c6x-x-x152138
-Ref: tilegx-*-linux152229
-Ref: tilepro-*-linux152348
-Ref: x-x-vxworks152469
-Ref: x86-64-x-x153991
-Ref: x86-64-x-solaris210154319
-Ref: xtensa-x-elf154981
-Ref: xtensa-x-linux155652
-Ref: windows155993
-Ref: x-x-cygwin157930
-Ref: x-x-interix158483
-Ref: x-x-mingw32158792
-Ref: older159018
-Ref: elf161135
-Node: Old161393
-Node: Configurations164530
-Node: GNU Free Documentation License168071
-Node: Concept Index193218
+Node: Building80298
+Node: Testing95783
+Node: Final install103655
+Node: Binaries108969
+Node: Specific110481
+Ref: alpha-x-x110991
+Ref: alpha-dec-osf51111480
+Ref: amd64-x-solaris210112005
+Ref: arm-x-eabi112108
+Ref: avr112319
+Ref: bfin112959
+Ref: cr16113201
+Ref: cris113616
+Ref: dos114432
+Ref: epiphany-x-elf114755
+Ref: x-x-freebsd114860
+Ref: h8300-hms116697
+Ref: hppa-hp-hpux117049
+Ref: hppa-hp-hpux10119420
+Ref: hppa-hp-hpux11119833
+Ref: x-x-linux-gnu125492
+Ref: ix86-x-linux125685
+Ref: ix86-x-solaris29125998
+Ref: ix86-x-solaris210126777
+Ref: ia64-x-linux127968
+Ref: ia64-x-hpux128738
+Ref: x-ibm-aix129293
+Ref: iq2000-x-elf136156
+Ref: lm32-x-elf136296
+Ref: lm32-x-uclinux136400
+Ref: m32c-x-elf136528
+Ref: m32r-x-elf136630
+Ref: m68k-x-x136732
+Ref: m68k-x-uclinux137770
+Ref: mep-x-elf138016
+Ref: microblaze-x-elf138126
+Ref: mips-x-x138245
+Ref: mips-sgi-irix5140641
+Ref: mips-sgi-irix6140721
+Ref: moxie-x-elf140908
+Ref: powerpc-x-x140955
+Ref: powerpc-x-darwin141160
+Ref: powerpc-x-elf141654
+Ref: powerpc-x-linux-gnu141739
+Ref: powerpc-x-netbsd141834
+Ref: powerpc-x-eabisim141922
+Ref: powerpc-x-eabi142048
+Ref: powerpcle-x-elf142124
+Ref: powerpcle-x-eabisim142216
+Ref: powerpcle-x-eabi142349
+Ref: rl78-x-elf142432
+Ref: rx-x-elf142538
+Ref: s390-x-linux142737
+Ref: s390x-x-linux142809
+Ref: s390x-ibm-tpf142896
+Ref: x-x-solaris2143027
+Ref: sparc-x-x147947
+Ref: sparc-sun-solaris2148449
+Ref: sparc-sun-solaris210151203
+Ref: sparc-x-linux151579
+Ref: sparc64-x-solaris2151804
+Ref: sparcv9-x-solaris2152457
+Ref: c6x-x-x152544
+Ref: tilegx-*-linux152635
+Ref: tilepro-*-linux152754
+Ref: x-x-vxworks152875
+Ref: x86-64-x-x154397
+Ref: x86-64-x-solaris210154725
+Ref: xtensa-x-elf155387
+Ref: xtensa-x-linux156058
+Ref: windows156399
+Ref: x-x-cygwin158336
+Ref: x-x-interix158889
+Ref: x-x-mingw32159198
+Ref: older159424
+Ref: elf161541
+Node: Old161799
+Node: Configurations164936
+Node: GNU Free Documentation License168477
+Node: Concept Index193624
 
 End Tag Table
